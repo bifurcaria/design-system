@@ -1,5 +1,5 @@
-import React, { createContext, useContext, ReactNode } from 'react';
-import { Theme } from './types';
+import React, { createContext, useContext, type ReactNode } from 'react';
+import { type Theme } from './types';
 import { lightTheme } from './tokens';
 
 const ThemeContext = createContext<Theme>(lightTheme);
