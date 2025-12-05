@@ -1,21 +1,22 @@
 import React from "react";
-import { TypographyProps } from "./types";
+import { type TypographyProps } from "./types";
 import { useTheme } from "../../theme";
 
-enum TypographyComponent {
-  display = 'h1',
-  titleLarge = 'h2',
-  title = 'h3',
-  titleSmall = 'h3',
-  headline = 'h4',
-  subheadline = 'h5',
-  body = 'p',
-  caption = 'span',
-  footnote = 'span',
-  labelLarge = 'label',
-  label = 'label',
-  labelSmall = 'label',
-}
+
+const TypographyComponent = {
+  display: 'h1',
+  titleLarge: 'h2',
+  title: 'h3',
+  titleSmall: 'h3',
+  headline: 'h4',
+  subheadline: 'h5',
+  body: 'p',
+  caption: 'span',
+  footnote: 'span',
+  labelLarge: 'label',
+  label: 'label',
+  labelSmall: 'label',
+} as const;
 
 
 export const Typography: React.FC<TypographyProps> = ({ 
