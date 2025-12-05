@@ -33,14 +33,12 @@ export const Typography: React.FC<TypographyProps> = ({
     <Component style={
         {
             fontFamily: theme.typography.families.default,
-            color: 'red',
             fontWeight: bold ? 'bold' : undefined,
             flexShrink,
             flexGrow,
             textAlign: align === 'auto' ? 'inherit' : align,
         }
     }>
-        Hi! This is a red typography component in web.
       {children}
     </Component>
   );
