@@ -1,5 +1,6 @@
 import React from "react";
 import { TypographyProps } from "./types";
+import { useTheme } from "../../theme";
 
 enum TypographyComponent {
   display = 'h1',
@@ -26,10 +27,11 @@ export const Typography: React.FC<TypographyProps> = ({
   bold = false,
 }) => {
   const Component = TypographyComponent[variant];
-  
+  const theme = useTheme();
   return (
     <Component style={
         {
+            fontFamily: theme.typography.families.default,
             color: 'red',
             fontWeight: bold ? 'bold' : undefined,
             flexShrink,
