@@ -1,10 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import { Button, Typography } from '@design-system/ui';
 import { useState } from 'react';
+import { useFonts } from 'expo-font';
+import { fontAssets } from '@design-system/ui/src/utils/fonts';
 
 export default function App() {
+  const [fontsLoaded] = useFonts(fontAssets);
   const [count, setCount] = useState(0);
+  
+  if (!fontsLoaded) {
+    return <ActivityIndicator size="small" />
+  }
+  
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
