@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from '@design-system/ui';
+import { Button, Typography } from '@design-system/ui';
 import { useState } from 'react';
 
 export default function App() {
@@ -13,6 +13,7 @@ export default function App() {
         <Text>Click me</Text>
       </Button>
       <Text>Count: {count}</Text>
+      <Typography>Hi :-) this is a typography component in native.</Typography>
     </View>
   );
 }
