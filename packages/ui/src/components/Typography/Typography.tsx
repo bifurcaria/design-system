@@ -1,9 +1,9 @@
-import React from "react";
-import { type TypographyProps } from "./types";
+import React, { JSX } from "react";
+import { type TypographyVariant, type TypographyProps } from "./types";
 import { useTheme } from "../../theme";
 
 
-const TypographyComponent = {
+const TypographyComponent: Record<TypographyVariant, keyof JSX.IntrinsicElements> = {
   display: 'h1',
   titleLarge: 'h2',
   title: 'h3',
@@ -16,7 +16,7 @@ const TypographyComponent = {
   labelLarge: 'label',
   label: 'label',
   labelSmall: 'label',
-} as const;
+}
 
 
 export const Typography: React.FC<TypographyProps> = ({ 
